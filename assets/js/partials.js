@@ -38,7 +38,7 @@ function buildHeader() {
 
   const nav = `
   <header class="site-header" id="siteHeader">
-    <div class="topbar"><div class="container topbar-inner"><span>Distribuidores Oficiales de</span>${glock}</div></div>
+    <div class="topbar"><div class="container topbar-inner"><span>Distribuidores Oficiales de GLOCK</span>${glock}</div></div>
     <div class="container header-inner">
       <a href="/" class="brand" aria-label="Magnum Guns &amp; Ammo Shop">
         <img src="/assets/img/logo.webp" alt="Magnum Gun Shop logo">
@@ -109,7 +109,7 @@ function buildHeader() {
 
       <a href="/contacto/" class="${is('contacto').trim()}">Contacto</a>
 
-      <div class="mm-distribuidor"><span>Distribuidores Oficiales de</span>${glock}</div>
+      <div class="mm-distribuidor"><span>Distribuidores Oficiales de GLOCK</span>${glock}</div>
     </nav>
   </div>
   `;
