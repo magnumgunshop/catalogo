@@ -29,7 +29,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
 
 body {
   font-family: var(--font);
@@ -385,10 +385,10 @@ select.chip { appearance: none; -webkit-appearance: none; cursor: pointer; paddi
 .check-list li .ck { width: 26px; height: 26px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); display: flex; align-items: center; justify-content: center; flex: 0 0 auto; font-size: 0.8rem; font-weight: 900; }
 
 /* brand marquee */
-.marquee { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 26px 0; background: var(--bg-2); }
-.marquee-track { display: flex; gap: 70px; width: max-content; animation: marquee 28s linear infinite; }
+.marquee { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 22px 0; background: var(--bg-2); }
+.marquee-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
-.marquee-track span { font-size: 1.7rem; font-weight: 900; letter-spacing: 0.06em; color: #4b5260; text-transform: uppercase; white-space: nowrap; transition: color .3s ease; }
+.marquee-track span { font-size: 1.7rem; font-weight: 900; letter-spacing: 0.06em; color: #4b5260; text-transform: uppercase; white-space: nowrap; transition: color .3s ease; margin-right: 70px; }
 .marquee-track span:hover { color: var(--accent); }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
@@ -543,6 +543,8 @@ body.age-locked { overflow: hidden; }
   .page-hero { min-height: auto; padding-top: calc(var(--header-h) + 40px); padding-bottom: 40px; }
   .pdf-viewer iframe { height: 480px; }
   .slider-arrow { width: 40px; height: 40px; }
+  .marquee-track span { font-size: 1.3rem; margin-right: 40px; }
+  .marquee { padding: 16px 0; }
 }
 @media (max-width: 420px) {
   .catalog-grid { grid-template-columns: 1fr; }
