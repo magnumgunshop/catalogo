@@ -96,7 +96,8 @@ h3 { font-size: 1.35rem; }
   transition: background .3s ease, box-shadow .3s ease;
 }
 .site-header.scrolled { background: rgba(11,12,15,0.96); box-shadow: 0 10px 30px -18px rgba(0,0,0,0.9); }
-.topbar { flex: 0 0 auto; display: flex; align-items: center; height: var(--topbar-h); border-bottom: 1px solid rgba(255,255,255,0.05); }
+.topbar { flex: 0 0 auto; display: flex; align-items: center; height: var(--topbar-h); border-bottom: 1px solid rgba(255,255,255,0.05); overflow: hidden; transition: height .3s ease, opacity .3s ease; }
+.site-header.scrolled .topbar { height: 0; opacity: 0; border-bottom: none; }
 .topbar-inner { display: flex; align-items: center; gap: 8px; font-size: 0.78rem; letter-spacing: 0.04em; color: var(--muted); font-weight: 600; }
 .topbar-inner img { height: 16px; width: auto; display: block; }
 .header-inner { display: flex; align-items: center; gap: 26px; width: 100%; height: var(--header-bar-h); }
