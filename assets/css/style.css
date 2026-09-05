@@ -523,6 +523,7 @@ body.age-locked { overflow: hidden; }
   .nav { display: none; }
   .burger { display: flex; }
   .brand .brand-text { display: none; }
+  .header-cta { margin-left: auto; }
   .split, .split.reverse { grid-template-columns: 1fr; gap: 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .packages-grid { grid-template-columns: repeat(2, 1fr); }

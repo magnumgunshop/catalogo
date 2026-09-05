@@ -117,7 +117,7 @@
     const brand = p.brand ? `<div class="pc-brand">${esc(p.brand)}</div>` : '';
     return `
     <article class="product-card">
-      <a class="pc-link" href="/producto/${encodeURIComponent(p.slug)}/" aria-label="${esc(p.name)}">
+      <a class="pc-link" href="/producto/${encodeURIComponent(p.slug)}" aria-label="${esc(p.name)}">
         <div class="pc-media">
           <span class="pc-badge">${esc(cat)}</span>
           <img src="${esc(imgSrc(p))}" alt="${esc(p.name)}" loading="lazy">
@@ -125,7 +125,7 @@
       </a>
       <div class="pc-body">
         ${brand}
-        <h3><a href="/producto/${encodeURIComponent(p.slug)}/">${esc(p.name)}</a></h3>
+        <h3><a href="/producto/${encodeURIComponent(p.slug)}">${esc(p.name)}</a></h3>
         ${p.caliber ? `<span class="pc-cal">${esc(p.caliber)}</span>` : ''}
         <span class="pc-cat">${esc(cat)}</span>
       </div>
