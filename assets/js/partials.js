@@ -34,8 +34,11 @@ function buildHeader() {
   const enlacesActive = ['catalogo-digital', 'campo-de-tiro', 'poligono-cerrado', 'tramites-permiso-de-armas-en-panama'].includes(slug) ? ' active' : '';
   const catActive = (slug === 'catalogo' || slug === 'producto') ? ' active' : '';
 
+  const glock = `<img src="https://magnumgunshop.com/wp-content/uploads/2024/11/pngfind.com-glock-logo-png-1551077.png" alt="GLOCK">`;
+
   const nav = `
   <header class="site-header" id="siteHeader">
+    <div class="topbar"><div class="container topbar-inner"><span>Distribuidores Oficiales de</span>${glock}</div></div>
     <div class="container header-inner">
       <a href="/" class="brand" aria-label="Magnum Guns &amp; Ammo Shop">
         <img src="/assets/img/logo.webp" alt="Magnum Gun Shop logo">
@@ -106,7 +109,7 @@ function buildHeader() {
 
       <a href="/contacto/" class="${is('contacto').trim()}">Contacto</a>
 
-      <a href="${window.MAGNUM.WA_INFO}" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm mm-wa">${ICONS.wa} Escríbenos</a>
+      <div class="mm-distribuidor"><span>Distribuidores Oficiales de</span>${glock}</div>
     </nav>
   </div>
   `;
