@@ -267,7 +267,6 @@
         <div class="pd-specs">
           ${specBrand}
           ${p.caliber ? `<div class="spec"><b>Calibre</b><span>${esc(p.caliber)}</span></div>` : ''}
-          <div class="spec"><b>Categoría</b><span>${esc(cat)}</span></div>
         </div>
         ${shortDesc ? `<div class="pd-desc">${esc(shortDesc)}</div>` : ''}
         <div class="pd-cta">
@@ -327,12 +326,59 @@
     });
   }
 
-  /* ---------- 8. Marquee (texto e imágenes) ---------- */
+  /* ---------- 8. Marquee de texto (marcas) ---------- */
   function initMarquee() {
-    document.querySelectorAll('.marquee-track, .clients-marquee').forEach(track => {
+    document.querySelectorAll('.marquee-track').forEach(track => {
       if (track.dataset.dup) return;
       track.dataset.dup = '1';
       track.innerHTML += track.innerHTML;
+    });
+  }
+
+  /* ---------- 8b. Carrusel de clientes (imágenes) ---------- */
+  function renderClientsMarquee() {
+    document.querySelectorAll('[data-clients-marquee]').forEach(track => {
+      if (track.dataset.filled) return;
+      track.dataset.filled = '1';
+      let items = '';
+      for (let i = 1; i <= 15; i++) {
+        const n = String(i).padStart(2, '0');
+        items += `<span class="clogo"><img src="/assets/img/clientes/cliente-${n}.jpeg" alt="Cliente"></span>`;
+      }
+      track.innerHTML = items;
+    });
+  }
+
+  function initClientsMarquee() {
+    document.querySelectorAll('.clients-marquee').forEach(track => {
+      if (track.dataset.ready) return;
+      track.dataset.ready = '1';
+      if (!track.children.length) return;
+      track.innerHTML += track.innerHTML; // duplicar para loop continuo
+
+      const half = () => track.scrollWidth / 2;
+      let offset = 0;
+      let dragging = false, startX = 0, startOffset = 0;
+
+      const clamp = () => { const h = half(); if (offset <= -h) offset += h; if (offset > 0) offset -= h; };
+      const apply = () => { track.style.transform = `translateX(${offset}px)`; };
+
+      function step() {
+        if (!dragging) { offset -= 0.6; clamp(); apply(); }
+        requestAnimationFrame(step);
+      }
+      function onStart(x) { dragging = true; startX = x; startOffset = offset; }
+      function onMove(x) { if (!dragging) return; offset = startOffset + (x - startX); clamp(); apply(); }
+      function onEnd() { dragging = false; }
+
+      track.addEventListener('touchstart', e => onStart(e.touches[0].clientX), { passive: true });
+      track.addEventListener('touchmove', e => onMove(e.touches[0].clientX), { passive: true });
+      track.addEventListener('touchend', onEnd, { passive: true });
+      track.addEventListener('mousedown', e => { onStart(e.clientX); e.preventDefault(); });
+      window.addEventListener('mousemove', e => onMove(e.clientX));
+      window.addEventListener('mouseup', onEnd);
+
+      requestAnimationFrame(step);
     });
   }
 
@@ -367,6 +413,8 @@
     initReveals();
     initFaq();
     initMarquee();
+    renderClientsMarquee();
+    initClientsMarquee();
     initCounters();
     initFiltersToggle();
     whenDataReady(() => {
