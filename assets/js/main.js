@@ -127,7 +127,6 @@
         ${brand}
         <h3><a href="/producto/${encodeURIComponent(p.slug)}">${esc(p.name)}</a></h3>
         ${p.caliber ? `<span class="pc-cal">${esc(p.caliber)}</span>` : ''}
-        <span class="pc-cat">${esc(cat)}</span>
       </div>
     </article>`;
   }

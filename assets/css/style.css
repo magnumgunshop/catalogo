@@ -262,7 +262,7 @@ select.chip { appearance: none; -webkit-appearance: none; cursor: pointer; paddi
 .product-card .pc-media { aspect-ratio: 4 / 3; background: var(--bg-4); overflow: hidden; position: relative; }
 .product-card .pc-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
 .product-card:hover .pc-media img { transform: scale(1.07); }
-.product-card .pc-media .pc-badge { position: absolute; top: 12px; left: 12px; background: rgba(11,12,15,0.82); color: var(--accent); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 11px; border-radius: 6px; backdrop-filter: blur(6px); }
+.product-card .pc-media .pc-badge { position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(11,12,15,0.82); color: var(--accent); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 11px; border-radius: 6px; backdrop-filter: blur(6px); }
 .product-card .pc-body { padding: 20px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
 .product-card .pc-brand { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
 .product-card h3 { font-size: 1.05rem; line-height: 1.25; }
