@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paquetes de Tiro — Magnum Guns &amp; Ammo Shop</title>
+  <meta name="description" content="Paquetes de tiro en polígono cerrado y campo de tiro en David, Chiriquí. Reserva tu sesión con expertos en seguridad.">
+  <link rel="icon" type="image/webp" href="/assets/img/logo.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="page-hero" style="background-image:url('/assets/img/poligono.jpg')">
+    <div class="container">
+      <nav class="crumbs" aria-label="Migas de pan"><a href="/">Inicio</a><span class="sep">/</span><span>Paquetes de Tiro</span></nav>
+      <span class="kicker">Nuestros Paquetes</span>
+      <h1>Paquetes de Tiro</h1>
+      <p>Agendar mínimo 1 día de anticipación. Clases y entrenamientos para el uso responsable de armas de fuego.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head center" data-reveal="up">
+        <span class="kicker center">Elige tu experiencia</span>
+        <h2>Paquetes disponibles</h2>
+        <p>Disponemos de los calibres: Calibre 380 · Calibre 5.7 · Calibre 9 mm</p>
+      </div>
+
+      <div class="packages-grid" id="packagesGrid" data-reveal-stagger></div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="split">
+        <div data-reveal="left">
+          <span class="kicker">Horario de Servicio Polígono</span>
+          <h2>Agenda tu sesión</h2>
+          <ul class="check-list">
+            <li><span class="ck">✓</span> Lunes-Viernes 9 am - 5 pm</li>
+            <li><span class="ck">✓</span> Sábados 9 am - 2 pm</li>
+            <li><span class="ck">✓</span> Agendar mínimo 1 día de anticipación</li>
+          </ul>
+        </div>
+        <div class="cta-band" style="background-image:url('/assets/img/banner-2.jpg');border-radius:var(--radius);padding:48px 40px;">
+          <div class="cta-inner" data-reveal="right">
+            <span class="kicker">Reservas</span>
+            <h2 style="font-size:1.8rem;">Para reservar escríbenos al WhatsApp</h2>
+            <p>Nuestro equipo te confirmará disponibilidad y horario.</p>
+            <a href="https://wa.me/+50767449433/?text=Hola%20MagnunGunShop%2C%20quiero%20reservar" target="_blank" rel="noopener" class="btn btn-red mt-2">Reservar Ahora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="/assets/js/partials.js"></script>
+  <script src="/assets/js/supabase-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/data/paquetes.js"></script>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

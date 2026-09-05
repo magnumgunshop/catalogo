@@ -1,0 +1,6 @@
+{
+  "trailingSlash": true,
+  "rewrites": [
+    { "source": "/producto/:path*", "destination": "/producto/index.html" }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "magnum-gun-shop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Magnum Guns & Ammo Shop — sitio estático",
+  "scripts": {
+    "serve": "node scripts/serve.js",
+    "import": "node scripts/import-productos.js productos.csv",
+    "upload:storage": "node scripts/upload-storage.js"
+  }
+}

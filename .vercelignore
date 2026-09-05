@@ -1,0 +1,14 @@
+node_modules/
+productos.csv
+package-lock.json
+clientes/
+pdf catalogos/
+pagina campo de tiro/
+Magnum Gun Shop - Venta de Armas en Chiriqui. Pistolas Glock/
+Sobre Nosotros - Magnum Guns & Ammo Shop/
+logo-blanco.webp
+magnum-logo.webp
+scripts/
+supabase/
+*.log
+.DS_Store

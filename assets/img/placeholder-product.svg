@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f232b"/>
+      <stop offset="1" stop-color="#121419"/>
+    </linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9a441"/>
+      <stop offset="1" stop-color="#8a6520"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <g transform="translate(400 300)">
+    <rect x="-180" y="-14" width="360" height="28" rx="14" fill="url(#g)" opacity="0.16"/>
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#d9a441" stroke-opacity="0.12" stroke-width="2"/>
+    <circle cx="0" cy="0" r="86" fill="none" stroke="#d9a441" stroke-opacity="0.22" stroke-width="2"/>
+    <g fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-130 0h170l-18-46h-92z"/>
+      <path d="M40-20v40M-20-20v40M-70-12v24"/>
+      <path d="M-20-46v-26h-40"/>
+      <path d="M-130-16l-30-14v40l30-12"/>
+    </g>
+  </g>
+  <text x="400" y="470" font-family="Montserrat, Arial, sans-serif" font-size="26" font-weight="700" fill="#d9a441" text-anchor="middle" letter-spacing="6">MAGNUM</text>
+  <text x="400" y="500" font-family="Montserrat, Arial, sans-serif" font-size="13" font-weight="600" fill="#6d7683" text-anchor="middle" letter-spacing="3">GUNS &amp; AMMO SHOP</text>
+</svg>
